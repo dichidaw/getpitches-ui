@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import WebMidiApi, {WebMidi, Input, Listener} from "webmidi";
+import WebMidiApi, { WebMidi, Input } from "webmidi";
 
 const MidiConnector: React.FC = () => {
     const [devices, setDevices] = useState<string[]>([]);
-    const [note, setNote] = useState<string | null>(null);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
@@ -54,7 +53,6 @@ const MidiConnector: React.FC = () => {
             ) : (
                 <p>No devices detected.</p>
             )}
-            {note && <p>Last Note Played: {note}</p>}
         </div>
     );
 };

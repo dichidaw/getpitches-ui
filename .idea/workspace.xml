@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6eac3920-4e79-4119-9e0a-8353e89c23f0" name="Changes" comment="init repository">
+    <list default="true" id="6eac3920-4e79-4119-9e0a-8353e89c23f0" name="Changes" comment="init Tone">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getpitches/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/getpitches/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getpitches/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/getpitches/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getpitches/src/Page/MelodyTone.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/getpitches/src/Page/MelodyTone.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/getpitches/src/Routes/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/getpitches/src/Routes/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/getpitches/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/getpitches/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -71,7 +76,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init repository" />
-    <option name="LAST_COMMIT_MESSAGE" value="init repository" />
+    <MESSAGE value="init Vexflow" />
+    <MESSAGE value="init Tone" />
+    <option name="LAST_COMMIT_MESSAGE" value="init Tone" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
