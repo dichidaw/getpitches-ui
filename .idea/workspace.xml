@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6eac3920-4e79-4119-9e0a-8353e89c23f0" name="Changes" comment="feat(melody-tone): add tone stopper">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="6eac3920-4e79-4119-9e0a-8353e89c23f0" name="Changes" comment="feat(melody-tone): add sustain" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +75,8 @@
     <MESSAGE value="feat(melody-tone): add midi playback" />
     <MESSAGE value="re-routes app" />
     <MESSAGE value="feat(melody-tone): add tone stopper" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(melody-tone): add tone stopper" />
+    <MESSAGE value="feat(melody-tone): add sustain" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(melody-tone): add sustain" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

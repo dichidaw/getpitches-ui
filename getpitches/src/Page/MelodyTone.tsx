@@ -7,6 +7,8 @@ import { mod } from '../Helper/ToneHelper';
 const MelodyTone: React.FC = () => {
     const [note, setNote] = useState<ToneNote | null>(null);
     const [noteStop, setNoteStop] = useState<ToneNote | null>(null);
+    const [sustain, setSustain] = useState<boolean>(false);
+    const sustainedNotesRef = useRef<Set<string>>(new Set());
 
     // Use useRef to persist the same sampler instance throughout the component lifecycle
     const samplerRef = useRef<Tone.Sampler | null>(null);
@@ -31,18 +33,35 @@ const MelodyTone: React.FC = () => {
     }, []);
 
     const handleMidiMessage = useCallback((e: WebMidiApi.MessageEvent) => {
-        if (e.data[0] !== 156) return;
-        const noteData: ToneNote = {
-            type: e.data[0],
-            pitch: e.data[1],
-            velocity: e.data[2],
-        };
+        // Handle notes event
+        if (e.data[0] === 156) {
+            const noteData: ToneNote = {
+                type: e.data[0],
+                pitch: e.data[1],
+                velocity: e.data[2],
+            };
 
-        if (noteData.velocity === 0) {
-            setNoteStop(noteData);
-        } else {
-            setNote(noteData);
+            if (noteData.velocity === 0) {
+                setNoteStop(noteData);
+            } else {
+                setNote(noteData);
+            }
         }
+
+        // Handle sustain pedal event
+        if (e.data[0] === 188 && e.data[1] === 64) {
+            const isSustainOn = e.data[2] > 64;
+            setSustain(isSustainOn);
+
+            // If sustain is released, stop all sustained notes
+            if (!isSustainOn) {
+                sustainedNotesRef.current.forEach((note) => {
+                    samplerRef.current?.triggerRelease(note);
+                });
+                sustainedNotesRef.current.clear();
+            }
+        }
+
     }, []);
 
     useEffect(() => {
@@ -65,33 +84,37 @@ const MelodyTone: React.FC = () => {
 
     useEffect(() => {
         if (note) {
-            console.log("note start: ", note);
-
             const nt = mod(note.pitch - 60, 12);
             const octave = Math.floor(note.pitch / 12) - 1;
             const final = PitchDiff[nt] + octave;
 
             Tone.loaded().then(() => {
                 samplerRef.current?.triggerAttack(final, undefined, note.velocity / 127);
+
+                if (sustain) {
+                    sustainedNotesRef.current.add(final);
+                }
             });
 
             setNote(null);
         }
 
         if (noteStop) {
-            console.log("note stop: ", noteStop);
-
             const nt = mod(noteStop.pitch - 60, 12);
             const octave = Math.floor(noteStop.pitch / 12) - 1;
             const final = PitchDiff[nt] + octave;
 
-            Tone.loaded().then(() => {
-                samplerRef.current?.triggerRelease(final);
-            });
+            if (!sustain) {
+                Tone.loaded().then(() => {
+                    samplerRef.current?.triggerRelease(final);
+                });
+            } else {
+                sustainedNotesRef.current.add(final);
+            }
 
             setNoteStop(null);
         }
-    }, [note, noteStop]);
+    }, [note, noteStop, sustain]);
 
     return (
         <div>
