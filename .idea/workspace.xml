@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6eac3920-4e79-4119-9e0a-8353e89c23f0" name="Changes" comment="init Tone">
+    <list default="true" id="6eac3920-4e79-4119-9e0a-8353e89c23f0" name="Changes" comment="feat(melody-tone): add tone stopper">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getpitches/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/getpitches/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getpitches/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/getpitches/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getpitches/src/Page/MelodyTone.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/getpitches/src/Page/MelodyTone.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getpitches/src/Routes/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/getpitches/src/Routes/routes.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/getpitches/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/getpitches/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +50,7 @@
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "preferences.editor.code.editing",
     "ts.external.directory.path": "D:\\dev\\getpitches-ui\\getpitches\\node_modules\\typescript\\lib"
   }
 }]]></component>
@@ -78,7 +73,11 @@
     <MESSAGE value="init repository" />
     <MESSAGE value="init Vexflow" />
     <MESSAGE value="init Tone" />
-    <option name="LAST_COMMIT_MESSAGE" value="init Tone" />
+    <MESSAGE value="feat(midi-connector): add midi list connector" />
+    <MESSAGE value="feat(melody-tone): add midi playback" />
+    <MESSAGE value="re-routes app" />
+    <MESSAGE value="feat(melody-tone): add tone stopper" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(melody-tone): add tone stopper" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
