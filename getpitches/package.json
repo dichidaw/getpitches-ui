@@ -12,7 +12,6 @@
     "@types/react-dom": "^18.3.0",
     "@types/react-router": "^5.1.20",
     "@types/react-router-dom": "^5.3.3",
-    "@types/vexflow": "^1.2.42",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router": "^6.26.1",
@@ -20,7 +19,7 @@
     "react-scripts": "5.0.1",
     "tone": "^15.0.4",
     "typescript": "^4.9.5",
-    "vexflow": "^4.2.5",
+    "vexflow": "^5.0.0-alpha.4",
     "web-vitals": "^2.1.4",
     "webmidi": "^3.1.11"
   },
